@@ -1,0 +1,10 @@
+import re
+logic1 = r'_[a-z]'
+logic2 = r'[A-Z]'
+k = "ArslanBarslan"
+with open('row_2.txt', 'r') as f:
+    p = f.read()
+    m = re.findall(r'[A-Z]+[^A-Z]*', k)
+    for i in range(len(m)):
+        m[i] = m[i].lower()
+    print("_".join(m))
